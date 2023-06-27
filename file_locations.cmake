@@ -18,8 +18,8 @@ cmake_path(GET CMAKE_CURRENT_SOURCE_DIR PARENT_PATH DEV_ROOT)
 # If we use standard installation no change in this file is needed
 if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
     # windows avr-gcc compiler
-    set(TOOLCHAIN_PATH "D:/HvA_DEV/avr8-gnu-toolchain-win32_x86_64/bin")
-    set(AVRDUDE_PATH "D:/HvA_DEV/avrdude-v7.1-windows-x64/")
+    set(TOOLCHAIN_PATH "MYWINDOWSPATH")
+    set(AVRDUDE_PATH "MYAVRDUDEPATH/")
 else()
     if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Darwin")
         # mac osx avr-gcc compiler
