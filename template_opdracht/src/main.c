@@ -1,10 +1,9 @@
 /**
- * @file example_assignment.c
+ * @file main.c
  * @author your name (you@domain.com)
  * @brief 
  * @version 0.1
  * @date 2023-06-26
- * 
  * 
  */
 
