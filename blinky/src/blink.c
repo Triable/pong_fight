@@ -9,7 +9,6 @@
 #define  F_CPU 2000000UL
 
 #include <avr/io.h>
-#define __DELAY_BACKWARD_COMPATIBLE__   // to avoid compile time errors in delay.h
 #include <util/delay.h>
 
 /**

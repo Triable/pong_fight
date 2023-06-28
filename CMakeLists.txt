@@ -42,6 +42,7 @@ add_compile_options("-Werror")
 add_compile_options("-funsigned-char")
 add_compile_options("-funsigned-bitfields")
 add_compile_options("-c")
+add_compile_options("-D__DELAY_BACKWARD_COMPATIBLE__")
 add_link_options(-Wl,--gc-sections)
 
 # give the project the root folder name
