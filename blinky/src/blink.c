@@ -22,10 +22,10 @@ int main(void) {
   while (1) {
     // Set pin 0 of port C high, LED is on
     PORTC.OUTSET = PIN0_bm;
-    _delay_ms (50);
+    _delay_ms(50);
 
     // Set pin 0 of port C low, LED is off
     PORTC.OUTCLR = PIN0_bm;
-    _delay_ms (950);
+    _delay_ms(950);
   }
 }
