@@ -10,20 +10,29 @@
 #define  F_CPU 2000000UL
 
 #include <avr/io.h>
+#include <avr/interrupt.h>
 #include <util/delay.h>
+#include <stdio.h>
+#include "serialF0.h"
 
 /**
  * @brief main starting point of the program.
- * @return int (with embedded this will never happen
+ * @return int (with embedded this will never happen)
  */
-int main() {
+int main()
+{
+  // Initialize the stream to be able to print with the UART
+  init_stream(F_CPU);
+  sei();
 
-  PORTC.DIRSET = PIN0_bm;       // bit 0 port C is set, it is an output
+  // Set pin 0 on port C as output
+  PORTC.DIRSET = PIN0_bm;
 
-  // endless loop
+  printf("Entering never ending while loop now.\n");
+  // Enter endless loop
   while (1) {
-
-    PORTC.OUTTGL = PIN0_bm;     // toggle bit 0 port C
-    _delay_ms (100);
+    // Toggle pin 0 of port C (from high to low or low to high)
+    PORTC.OUTTGL = PIN0_bm;
+    _delay_ms(100);
   }
 }
