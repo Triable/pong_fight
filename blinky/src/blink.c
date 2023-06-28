@@ -17,12 +17,16 @@
  * @return nothing as we never get there
  */
 int main(void) {
-  PORTC.DIRSET = PIN0_bm;       // bit 0 port C is set, it is an output
+  // Set pin 0 of port C as an output
+  PORTC.DIRSET = PIN0_bm;
 
   while (1) {
-    PORTC.OUTSET = PIN0_bm;     // bit 0 port C is high, led is on
+    // Set pin 0 of port C high, LED is on
+    PORTC.OUTSET = PIN0_bm;
     _delay_ms (50);
-    PORTC.OUTCLR = PIN0_bm;     // bit 0 port C is low, led is off
-    _delay_ms (900);
+
+    // Set pin 0 of port C low, LED is off
+    PORTC.OUTCLR = PIN0_bm;
+    _delay_ms (950);
   }
 }
