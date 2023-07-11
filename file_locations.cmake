@@ -10,7 +10,13 @@
 #
 
 # root folder of our tool. is automatically determined
-cmake_path(GET CMAKE_CURRENT_SOURCE_DIR PARENT_PATH DEV_ROOT)
+if(DEFINED ENV{DEV_ROOT})
+    set(DEV_ROOT $ENV{DEV_ROOT})
+    message(STATUS "DEV_ROOT is defined as ${DEV_ROOT}")
+else()
+    cmake_path(GET CMAKE_CURRENT_SOURCE_DIR PARENT_PATH DEV_ROOT)
+    message(STATUS "DEV_ROOT was not defined, and is now set as ${DEV_ROOT}")
+endif()
 
 # compiler path. This should be the only one to modify unless
 # AVR_DUDE is somewhere else
