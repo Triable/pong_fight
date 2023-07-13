@@ -10,7 +10,8 @@
     #           1.3  added .hex output and a listing file output
     #           1.4  add compiling attiny1627 (and probably others as well)
     #           1.5  clean up the make file and allow default overridings for cpu and comport in local CMakelist.txt
-    # @date     10-5-2023
+    #           1.6  add 2 conditional add_link_options lines for the atxmega256a3u
+    # @date     13-7-2023
     #
 
     # no need to check compilers
@@ -71,6 +72,15 @@
 
     add_compile_options("-mmcu=${TARGET_CPU}")
     add_link_options(-mmcu=${TARGET_CPU})
+
+    #
+    # change 1.6
+    #
+    if (TARGET_CPU EQUAL atxmega256a3u)
+        add_link_options(-Wl,-u,vfprintf)
+        add_link_options(-lprintf_flt)
+    endif()
+    #
 
     # Now the project is reset to the latest state
     project(${PROJECT_NAME} C CXX NONE)
@@ -137,6 +147,7 @@
     add_executable(${PROJECT_NAME}.elf
             ${PROJECT_SRC}
     )
+
 
     # post build process
     # Clean up unused and info code y removing DEBUG info etc
