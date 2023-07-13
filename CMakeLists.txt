@@ -44,8 +44,11 @@ add_compile_options("-funsigned-bitfields")
 add_compile_options("-c")
 add_compile_options("-D__DELAY_BACKWARD_COMPATIBLE__")
 add_link_options(-Wl,--gc-sections)
-add_link_options(-Wl,-u,vfprintf)
-add_link_options(-lprintf_flt)
+
+# see change 1.6 in generic.cmake
+#add_link_options(-Wl,-u,vfprintf)
+#add_link_options(-lprintf_flt)
+
 add_link_options(-lm)
 
 # give the project the root folder name
