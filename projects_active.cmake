@@ -11,4 +11,6 @@ add_subdirectory(week2_opdracht1)
 add_subdirectory(week2_opdracht2)
 add_subdirectory(week2_opdracht3)
 add_subdirectory(week2_opdracht4)
+add_subdirectory(week2_opdracht42)
+
 
