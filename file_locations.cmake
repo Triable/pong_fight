@@ -24,8 +24,8 @@ endif()
 # If we use standard installation no change in this file is needed
 if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Windows")
     # windows avr-gcc compiler
-    set(TOOLCHAIN_PATH "MYWINDOWSPATH")
-    set(AVRDUDE_PATH "MYAVRDUDEPATH/")
+    set(TOOLCHAIN_PATH "C:/Users/conno/Documents/GCC/avr8-gnu-toolchain-win32_x86_64/bin")
+    set(AVRDUDE_PATH "C:/Users/conno/Documents/GCC/avrdude-v7.1-windows-x64/")
 else()
     if(${CMAKE_HOST_SYSTEM_NAME} STREQUAL "Darwin")
         # mac osx avr-gcc compiler
