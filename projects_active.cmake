@@ -5,14 +5,9 @@
 # version   1.0
 # @date     17-4-2023
 #
-add_subdirectory(blinky)
-add_subdirectory(helloworld)
-add_subdirectory(week2_opdracht1)
-add_subdirectory(week2_opdracht2)
-add_subdirectory(week2_opdracht3)
-add_subdirectory(week2_opdracht4)
-add_subdirectory(week2_opdracht42)
-add_subdirectory(week3_opdracht1)
+add_subdirectory(tft_display_ucg)
+
+
 
 
 
